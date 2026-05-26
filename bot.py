@@ -12,7 +12,7 @@ user_db = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     await update.message.reply_text(
-        "မင်္ဂလာပါဗျာ! Leomatch Mini မှ ကြိုဆိုပါတယ်။\n"
+        "မင်္ဂလာပါဗျာ! Myanmar Gay Dating Bot မှ ကြိုဆိုပါတယ်။\n"
         "Matching စလုပ်ဖို့ သင့်ရဲ့ ကိုယ်ရေးအချက်အလက်လေး အရင်ဖြည့်ရအောင်။\n\n"
         "သင်က Top လား၊ Bottom လားဗျာ?",
         reply_markup=ReplyKeyboardMarkup([['Top', 'Bottom']], one_time_keyboard=True)
