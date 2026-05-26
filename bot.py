@@ -50,14 +50,14 @@ async def find_match(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if current_user_id not in user_db:
         await update.message.reply_text("အရင်ဆုံး /start ကိုနှိပ်ပြီး Profile အရင်ဆောက်ပေးပါဦး။")
         return
-    
+        
     found = False
     for user_id, data in user_db.items():
         if user_id != current_user_id:
             await update.message.reply_text(
                 f"✨ Match တစ်ယောက် ရှာတွေ့ပါတယ်။ ✨\n\n"
                 f"အသက်: {data['age']}\n"
-                f"လိင်: {data['gender']}\n"
+                f"အမျိုးအစား: {data['gender']}\n"
                 f"အကြောင်းအရာ: {data['bio']}\n"
                 f"စကားပြောရန်: @{data['username']}"
             )
@@ -90,7 +90,9 @@ def main():
 
     application.add_handler(conv_handler)
     application.add_handler(CommandHandler('find', find_match))
+    
     print("Bot စတင် အလုပ်လုပ်နေပါပြီ...")
     application.run_polling()
-if __name__== '__main__':
+
+if __name__ == '__main__':
     main()
