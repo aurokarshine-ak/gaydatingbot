@@ -92,5 +92,5 @@ def main():
     application.add_handler(CommandHandler('find', find_match))
     print("Bot စတင် အလုပ်လုပ်နေပါပြီ...")
     application.run_polling()
-if name == '__main__':
+if __name__== '__main__':
     main()
